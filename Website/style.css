@@ -3,5 +3,30 @@ html {
 }
 
 body {
-	background: linear-gradient(to bottom right, #05445E, #75E6DA);
+  background: repeating-conic-gradient(
+      from 0deg at 80% 50%,
+      #044389 0% 8.25%,
+      #C490D1 8.25% 16.5%,
+      #F9A03F 16.5% 25%
+    );
+}
+
+header h1 {
+	color: #AF125A;
+	text-align: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: auto;
+	grid-template-areas:
+	"header header header header"
+	"nav nav nav nav"
+	"main main sidebar sidebar"
+	"footer footer footer footer";
+}
+
+.header {
+	grid-area: header;
 }
