@@ -6,29 +6,23 @@ body {
   background: linear-gradient(#044389, #AF125A )
 }
 
-header {
-}
-
-header h1 {
-	color: #fff;
-	text-align: left;
-}
-
 .container {
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: auto;
 	grid-template-areas:
 	"icon header header header"
-	"nav nav nav nav"
-	"main main main sidebar"
+	"nav main main main"
 	"footer footer footer footer";
 }
 
 .icon {
+	margin-left: 27%;
 	grid-area: icon;
 }
+
 .icon img {
+	width: 60%;
 	border-color: #AF125A ;
 	border-radius: 50%;
 	border-width: 3px;
@@ -39,7 +33,14 @@ header h1 {
 	grid-area: header;
 }
 
+header h1 {
+	color: #fff;
+	margin-right: 20%;
+	margin-left: 10%;
+}
+
 .main {
+	margin-right: 34%;
 	grid-area: main;
 }
 
@@ -57,13 +58,30 @@ header h1 {
 	color: #fff;
 }
 
-.sidebar {
-	color: #fff; 
-	grid-area: sidebar;
+.nav {
+	grid-area: nav;
+	text-align: center;
 }
 
-.sidebar h1 {
+.button {
+	background-color: #Af125A;
+	color: #FFF;
+	border: 5px dashed #Af125A;
+	font-size: 1.2em;
+	padding: 5px 10px;
 	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	width: 50%;
+}
+
+.button:hover {
+	background-color: #12664F;
+}
+
+.button.active {
+	color: #2223A5;
 }
 
 .footer {
@@ -71,3 +89,4 @@ header h1 {
 	text-align: center;
 	grid-area: footer;
 }
+
